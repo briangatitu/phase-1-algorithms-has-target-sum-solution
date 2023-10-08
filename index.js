@@ -1,5 +1,12 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+    let map = {}
+  for (let i =0; i < array.length; i++){
+    let diff =  target - array[i]
+    if (diff in map){return true}
+    map[array[i]] = true
+  }
+  return false
 }
 
 /* 
